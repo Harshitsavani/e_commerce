@@ -19,7 +19,6 @@ class _product_detailState extends State<product_detail> {
   Widget build(BuildContext context) {
     Model model = ModalRoute.of(context)!.settings.arguments as Model;
     List images = model.images!;
-    print(model.rating);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -53,33 +52,6 @@ class _product_detailState extends State<product_detail> {
                   });
                 },
               ),
-              // Container(
-              //   height: 100,
-              //   child: ListView.builder(
-              //     itemCount: images.length,
-              //     scrollDirection: Axis.horizontal,
-              //     itemBuilder: (context, index) {
-              //       return InkWell(
-              //         onTap: () {
-              //           image_name = images[index];
-              //           setState(() {});
-              //         },
-              //         child: Container(
-              //           margin: EdgeInsets.all(5),
-              //           width: 75,
-              //           decoration: BoxDecoration(
-              //             border: Border.all(),
-              //             borderRadius: BorderRadius.circular(10),
-              //             image: DecorationImage(
-              //               fit: BoxFit.fill,
-              //               image: NetworkImage('${images[index]}'),
-              //             ),
-              //           ),
-              //         ),
-              //       );
-              //     },
-              //   ),
-              // ),
               Center(
                 child: Text(
                   "${model.title}",
